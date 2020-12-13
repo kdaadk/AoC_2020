@@ -32,13 +32,9 @@ namespace AoC_2020
             long time = 0;
             long nextTime = schedule.Keys.First();
 
-            while (true)
+            while (!CheckSchedule(schedule, schedule.Count))
             {
                 schedule = GetNextSchedule(time, buses, schedule);
-
-                if (CheckSchedule(schedule, schedule.Count))
-                    break;
-
                 nextTime = GetNextTime(schedule, nextTime);
                 time += nextTime;
             }
