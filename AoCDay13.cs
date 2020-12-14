@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace AoC_2020
@@ -8,9 +9,9 @@ namespace AoC_2020
     {
         private static Dictionary<int, List<long>> speedUp = new Dictionary<int, List<long>> {{1,new List<long>()}};
 
-        public static void SolvePart2(string[] input)
+        public static void SolvePart2()
         {
-            input = input[1].Split(",").ToArray();
+            var input = File.ReadAllLines("input.txt")[1].Split(",").ToArray();
 
             var schedule = input.Select((x, idx) => new {bus = x, diff = idx})
                 .Where(x => x.bus != "x")
