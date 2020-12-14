@@ -88,7 +88,7 @@ namespace AoC_2020
                 source /= 2;
                 result = remainder + result;
             }
-            return result.Length == 36 ? result : new string(Enumerable.Repeat('0', 36-result.Length).ToArray())+result;
+            return result.PadLeft(36);
         }
         
         private static long ToInt36(string source)
