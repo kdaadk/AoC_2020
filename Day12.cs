@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AoC_2020
 {
-    public class AoCDay12
+    public class Day12
     {
         private static Dictionary<string, string> directonsMap = new Dictionary<string, string>()
         {

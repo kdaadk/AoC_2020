@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AoC_2020
 {
-    public static class AoCDay14
+    public static class Day14
     {
         public static void SolvePart2()
         {

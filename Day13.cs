@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AoC_2020
 {
-    public static class AoCDay13
+    public static class Day13
     {
         private static Dictionary<int, List<long>> speedUp = new Dictionary<int, List<long>> {{1,new List<long>()}};
 

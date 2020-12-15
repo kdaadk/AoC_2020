@@ -4,8 +4,10 @@
     {
         private static void Main()
         {
-            //AoCDay13.SolvePart2();
-            //AoCDay14.SolvePart2();
+            //Day12.SolvePart2();
+            //Day13.SolvePart2();
+            //Day14.SolvePart2();
+            //Day15.SolvePart2();
         }
     }
 }
