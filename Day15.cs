@@ -22,19 +22,11 @@ namespace AoC_2020
 
             while (step < goal + 1)
             {
-                if (memory[lastSpokenNumber].Count == 1)
-                {
-                    lastSpokenNumber = 0;
-                    if (!memory.ContainsKey(lastSpokenNumber)) memory.Add(0, new List<long> {step});
-                    else memory[lastSpokenNumber].Add(step);
-                }
-                else
-                {
-                    lastSpokenNumber = memory[lastSpokenNumber].Last() -
-                                       memory[lastSpokenNumber][memory[lastSpokenNumber].Count - 2];
-                    if (!memory.ContainsKey(lastSpokenNumber)) memory.Add(lastSpokenNumber, new List<long> {step});
-                    else memory[lastSpokenNumber].Add(step);
-                }
+                lastSpokenNumber = memory[lastSpokenNumber].Count == 1
+                    ? 0
+                    : memory[lastSpokenNumber][^1] - memory[lastSpokenNumber][^2];
+                if (!memory.ContainsKey(lastSpokenNumber)) memory.Add(lastSpokenNumber, new List<long> {step});
+                else memory[lastSpokenNumber].Add(step);
 
                 step++;
             }
